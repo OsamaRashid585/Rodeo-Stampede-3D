@@ -6,6 +6,8 @@ public class FollowPlayer : MonoBehaviour
 {
     public GameObject _target;
     public Vector3 _offSet;
+    public float _speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     private void LateUpdate()
     {
-        transform.position = _target.transform.position + _offSet;
+       transform.position += new Vector3(0, 0, _speed);
     }
 }
